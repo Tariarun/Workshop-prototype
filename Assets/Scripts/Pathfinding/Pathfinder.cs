@@ -50,7 +50,7 @@ public class Pathfinder : MonoBehaviour
                     NodeQueue.Enqueue(actualnode+new Vector3Int(0,-1,0));
                     children.Add(actualnode+new Vector3Int(0,-1,0));
                 }
-                TileNode.Add(actualnode, new Node(children, actualnode, null));
+                TileNode.Add(actualnode, new Node(children, actualnode, null, false, null));
 
 
                 foreach (Vector3Int child in children)
