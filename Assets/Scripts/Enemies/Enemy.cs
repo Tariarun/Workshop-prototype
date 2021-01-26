@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     {
         Idle,
         Attacking,
-
     }
     public BehaviourAI ActualBehaviour = BehaviourAI.Idle;
     /// /AI Behaviour
@@ -21,17 +20,15 @@ public class Enemy : MonoBehaviour
     private Vector3 nextwaypoint;
     /// /waypoints system
     
-    /// /abilities
+    /// abilities
     [SerializeField] private float reflex;
     [SerializeField] private float speed;
-    [SerializeField] private int PointToStart;
-    public int id;
+
     /// /abilities
 
     /// target
     protected Vector3 target;
-
-    protected Vector3 lasttarget;
+    [SerializeField] protected GameObject lasttarget;
     /// /target
     
     /// pathfinder
@@ -53,8 +50,6 @@ public class Enemy : MonoBehaviour
         {
             if (transform.position != nextwaypoint && nextwaypoint != Vector3.zero)
             {
-                this.GetComponent<Animator>().SetFloat("Yvector", nextwaypoint.y  - transform.position.y);
-                this.GetComponent<Animator>().SetFloat("Xvector", nextwaypoint.x  - transform.position.x);
                 transform.position = Vector3.MoveTowards(transform.position, nextwaypoint, speed * Time.deltaTime);
             }
             else
@@ -87,8 +82,8 @@ public class Enemy : MonoBehaviour
 
                 case BehaviourAI.Idle:
                     Debug.Log("In Idle");
-                   
                     yield return new WaitForSeconds(reflex);
+                    ActualBehaviour = BehaviourAI.Attacking;
                     break;
             }
         }

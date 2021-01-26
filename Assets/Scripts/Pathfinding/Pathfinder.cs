@@ -30,22 +30,22 @@ public class Pathfinder : MonoBehaviour
             if (!TileNode.ContainsKey(actualnode))
             {
                 Debug.Log(actualnode);
-                if (maptilemap.GetTile(actualnode+new Vector3Int(1,0,0)) == null)
+                if (maptilemap.GetTile(actualnode+new Vector3Int(1,0,0)) != null)
                 {
                     NodeQueue.Enqueue(actualnode+new Vector3Int(1,0,0));
                     children.Add(actualnode+new Vector3Int(1,0,0));
                 }
-                if (maptilemap.GetTile(actualnode+new Vector3Int(-1,0,0)) == null)
+                if (maptilemap.GetTile(actualnode+new Vector3Int(-1,0,0)) != null)
                 {
                     NodeQueue.Enqueue(actualnode+new Vector3Int(-1,0,0));
                     children.Add(actualnode+new Vector3Int(-1,0,0));
                 }
-                if (maptilemap.GetTile(actualnode+new Vector3Int(0,1,0)) == null)
+                if (maptilemap.GetTile(actualnode+new Vector3Int(0,1,0)) != null)
                 {
                     NodeQueue.Enqueue(actualnode+new Vector3Int(0,1,0));
                     children.Add(actualnode+new Vector3Int(0,1,0));
                 }
-                if (maptilemap.GetTile(actualnode+new Vector3Int(0,-1,0)) == null)
+                if (maptilemap.GetTile(actualnode+new Vector3Int(0,-1,0)) != null)
                 {
                     NodeQueue.Enqueue(actualnode+new Vector3Int(0,-1,0));
                     children.Add(actualnode+new Vector3Int(0,-1,0));
@@ -157,7 +157,7 @@ public class Pathfinder : MonoBehaviour
 
         }
         
-      
+        
         actualnode.parent = null;
         Resetparent(usedNode);
         return path;
