@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6007334568106533206}
   - component: {fileID: 25008172705033084}
   - component: {fileID: 6041783676110094722}
+  - component: {fileID: 3687852011628322373}
   m_Layer: 0
   m_Name: pieuvre
   m_TagString: Untagged
@@ -350,3 +351,20 @@ PolygonCollider2D:
       - {x: 0.44444448, y: 1.7738097}
       - {x: 0.47222224, y: 1.7500001}
       - {x: 0.468254, y: 1.7579366}
+--- !u!114 &3687852011628322373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8068688199740934498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8eaf106e422454794a3dd026814a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActualBehaviour: 0
+  reflex: 1
+  speed: 2
+  lasttarget: {fileID: 0}
+  _pathfinder: {fileID: 0}
