@@ -2318,6 +2318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   occupied: 0
   Turret: {fileID: 7175375462334836992, guid: a44e750a83c669545a9a1b4edddeb14a, type: 3}
+  maptilemap: {fileID: 767463526}
 --- !u!114 &1941391846
 MonoBehaviour:
   m_ObjectHideFlags: 0

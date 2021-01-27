@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Placing : MonoBehaviour
 {
     public bool occupied = false;
     public GameObject Turret;
-    
+    public Tilemap maptilemap;
+
     void Start()
     {
         
@@ -18,17 +20,21 @@ public class Placing : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 clickPosition = -Vector3.one;
-            clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 0f)); 
+            clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            GridLayout gridLayout = transform.parent.GetComponentInParent<GridLayout>();
-            Vector3Int cellPosition = gridLayout.WorldToCell(transform.position);
-            transform.position = gridLayout.CellToWorld(cellPosition);
+            Vector3Int tilePosition = maptilemap.WorldToCell(clickPosition);
+            Vector3 spawnPosition = maptilemap.GetCellCenterWorld(tilePosition);
 
-            Instantiate(Turret, cellPosition, Quaternion.identity);
+            if (Pathfinder.TileNode[tilePosition].usable)
+            {
+                Pathfinder.TileNode[tilePosition].objecton = Instantiate(Turret, spawnPosition, Quaternion.identity);
+                Pathfinder.TileNode[tilePosition].usable = false;
+            }
+            else
+            {
+                Debug.Log ("Impossible");
+            }
+            
         }
     }
-
-    //GridLayout gridLayout = transform.parent.GetComponentInParent<GridLayout>();
-    //Vector3Int cellPosition = gridLayout.WorldToCell(transform.position);
-    //transform.position = gridLayout.CellToWorld(cellPosition);
 }
