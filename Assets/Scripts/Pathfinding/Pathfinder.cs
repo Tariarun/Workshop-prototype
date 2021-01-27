@@ -24,6 +24,7 @@ public class Pathfinder : MonoBehaviour
         
         while (NodeQueue.Count > 0)
         {
+            
             List<Vector3Int> children = new List<Vector3Int>();
             Vector3Int actualnode = NodeQueue.Dequeue();
 
@@ -50,7 +51,7 @@ public class Pathfinder : MonoBehaviour
                     NodeQueue.Enqueue(actualnode+new Vector3Int(0,-1,0));
                     children.Add(actualnode+new Vector3Int(0,-1,0));
                 }
-                TileNode.Add(actualnode, new Node(children, actualnode, null, false, null));
+                TileNode.Add(actualnode, new Node(children, actualnode, null, true, null));
 
 
                 foreach (Vector3Int child in children)
