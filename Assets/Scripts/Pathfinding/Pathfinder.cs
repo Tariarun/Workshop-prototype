@@ -101,7 +101,7 @@ public class Pathfinder : MonoBehaviour
                 {
                     foreach (Vector3Int child in thisnode.children)
                     {
-                        if (TileNode[child].parent == null)
+                        if (TileNode[child].usable && TileNode[child].parent == null)
                         {
                             TileNode[child].parent = thisnode;
                             usedNode.Add(TileNode[child]);

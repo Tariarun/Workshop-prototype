@@ -22,17 +22,18 @@ public class Turret : MonoBehaviour
     private float angletotarget;
     private bool isfireok = true;
     private Transform bulletspawn;
+
     
 
-
-    [SerializeField] private Vector3 bulletoffset;
+    
     private Transform bulletcontainer;
     
     void Start()
     {
+
         bulletspawn = transform.GetChild(0).GetComponent<Transform>();
         bulletcontainer = GameObject.FindWithTag("bulletcontainer").transform;
-        _animator = this.GetComponent<Animator>();
+        _animator = this.GetComponentInChildren<Animator>();
         isfireokanimhash = Animator.StringToHash("SniperTurret1");
 
 
@@ -44,8 +45,10 @@ public class Turret : MonoBehaviour
         if (target != null)
         {
             LookTo(target);
-            if (isfireok && IsFireLineClear(transform.position, target))
+            
+            if (isfireok && IsFireLineClear(bulletspawn.position, target))
             {
+                
                 Debug.Log("Before Fire couroutine");
                 _animator.Play(isfireokanimhash);
                 StartCoroutine(Shootdelay(ratefire));
@@ -103,8 +106,8 @@ public class Turret : MonoBehaviour
     private bool IsFireLineClear(Vector3 position, GameObject target)
     {
         
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + bulletoffset, transform.right, firerange, mask);
-        Debug.DrawLine(position, hit.point, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(position, transform.right, firerange, mask);
+        Debug.DrawLine(position, hit.point, Color.red, 1f);
         
         if (hit.collider != null && hit.collider.gameObject == target.gameObject)
         {
@@ -118,7 +121,7 @@ public class Turret : MonoBehaviour
         }
     }
     
-    void Shoot()
+    public void Shoot()
     {
         GameObject thisbullet = Instantiate(bullet, bulletspawn.position, Quaternion.identity, bulletcontainer);
         thisbullet.GetComponent<Rigidbody2D>().velocity = transform.right * bulletspeed ;
