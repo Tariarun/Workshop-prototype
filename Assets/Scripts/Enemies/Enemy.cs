@@ -19,11 +19,11 @@ public class Enemy : MonoBehaviour
     private Stack<Vector3> waypoints;
     private Vector3 nextwaypoint;
     /// /waypoints system
-    
+
     /// abilities
+    [SerializeField] private int health;
     [SerializeField] private float reflex;
     [SerializeField] private float speed;
-
     /// /abilities
 
     /// target

@@ -31,7 +31,7 @@ public class Turret : MonoBehaviour
     void Start()
     {
 
-        bulletspawn = transform.GetChild(0).GetComponent<Transform>();
+        bulletspawn = transform.GetChild(1).GetComponent<Transform>();
         bulletcontainer = GameObject.FindWithTag("bulletcontainer").transform;
         _animator = this.GetComponentInChildren<Animator>();
         isfireokanimhash = Animator.StringToHash("SniperTurret1");
@@ -109,7 +109,7 @@ public class Turret : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(position, transform.right, firerange, mask);
         Debug.DrawLine(position, hit.point, Color.red, 1f);
         
-        if (hit.collider != null && hit.collider.gameObject == target.gameObject)
+        if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             Debug.Log("Touching");
             return true;
