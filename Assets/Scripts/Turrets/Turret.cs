@@ -22,7 +22,7 @@ public class Turret : MonoBehaviour
     private float angletotarget;
     private bool isfireok = true;
     private Transform bulletspawn;
-
+    
     
 
     
