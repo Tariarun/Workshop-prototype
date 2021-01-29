@@ -158,15 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d8fee6aab0d794aacc76870566018c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ratefire: 3
-  damage: 20
-  cost: 15
-  firerange: 200
-  upgrades: []
-  animname: SniperTurret1
   bullet: {fileID: 5519323260704215286, guid: ef211327b6c131e41b6d45ab4dde78a5, type: 3}
   bulletspeed: 20
   bulletspawn: {fileID: 17717436597880418}
+  ID: 13
 --- !u!212 &9048536849894694775
 SpriteRenderer:
   m_ObjectHideFlags: 0
