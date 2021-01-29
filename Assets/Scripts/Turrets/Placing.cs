@@ -11,8 +11,13 @@ public class Placing : MonoBehaviour
 
     private Camera cam;
     public GameObject selectUi;
+    private Vector3 spawnPosition;
+    private Vector3Int tilePosition;
 
+    private bool uiactive = false;
     int ID;
+    [SerializeField] private GameObject[] Uibutton;
+    [SerializeField] private Image[] Uiimage;
 
     //public GameObject turretUi;
     //protected Button upgrade01, upgrade02, destroy, close;
@@ -20,27 +25,37 @@ public class Placing : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        
     }
 
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !uiactive)
         {
             Vector3 clickPosition = -Vector3.one;
             clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            Vector3Int tilePosition = maptilemap.WorldToCell(clickPosition);
-            Vector3 spawnPosition = maptilemap.GetCellCenterWorld(tilePosition);
-
-            //Les lignes ci-dessous permettent d'envoyer les valeurs à "PlacingUi" en passant par le Gameplay Manager
-            GameplayManager.Instance.gmTilePosition = tilePosition;
-            GameplayManager.Instance.gmSpawnposition = spawnPosition;
+            tilePosition = maptilemap.WorldToCell(clickPosition);
+            spawnPosition = maptilemap.GetCellCenterWorld(tilePosition);
 
             if (Pathfinder.TileNode[tilePosition].usable)
             {
+
+                ID = -1;
+                
+                selectUi.transform.position = spawnPosition;
+
+                Uiimage[0].sprite = GameplayManager.Instance.icon[0];
+                Uiimage[1].sprite = GameplayManager.Instance.icon[5];
+                Uiimage[2].sprite = GameplayManager.Instance.icon[10];
+                Uibutton[3].SetActive(false);
                 selectUi.SetActive(true);
-                GameplayManager.Instance.selectUiActivated = true;
+                uiactive = true;
+
+
+
+
 
                 /*if (bouton 1 est cliqué)
                  * {
@@ -63,16 +78,113 @@ public class Placing : MonoBehaviour
 
                 //Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[0], spawnPosition, Quaternion.identity);
                 //Pathfinder.TileNode[tilePosition].usable = false;
+
             }
             else
             {
                 Vector3 newPosition = spawnPosition;
-                Destroy(Pathfinder.TileNode[tilePosition].objecton);
-                Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[1], newPosition, Quaternion.identity);
+                ID = 1;
+                Debug.Log("What is gameobjecton "+ Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID.Length);
+                if (Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID.Length == 2)
+                {
+                    Uiimage[0].sprite = GameplayManager.Instance.icon[Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID[0]];
+                    Uiimage[1].sprite = GameplayManager.Instance.icon[Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID[1]];
+                    selectUi.SetActive(true);
+                    Uibutton[0].SetActive(true);
+                    Uibutton[1].SetActive(true);
+                    Uibutton[2].SetActive(false);
+                    Uibutton[3].SetActive(true);
+                    uiactive = true;
+                }else if (Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID.Length == 1)
+                {
+                    Uiimage[0].sprite = GameplayManager.Instance.icon[Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID[0]];
 
-                GameplayManager.Instance.upgrade01[0] = Instantiate(GameplayManager.Instance.ui[0], FindObjectOfType<Canvas>().transform).GetComponent<Button>();
+                    Uibutton[0].SetActive(true);
+                    Uibutton[1].SetActive(false);
+                    Uibutton[2].SetActive(false);
+                    Uibutton[3].SetActive(true);
+                    uiactive = true;
+                }
+                else
+                {
+                    Uibutton[0].SetActive(false);
+                    Uibutton[1].SetActive(false);
+                    Uibutton[2].SetActive(false);
+                    Uibutton[3].SetActive(true);
+                    uiactive = true;
+                }
+                
+                
             }
             
         }
     }
+
+    public void LeftUI()
+    {
+        if (ID == -1)
+        {
+            GameObject turret = Instantiate(GameplayManager.Instance.upgrades[0], spawnPosition, Quaternion.identity);
+            Pathfinder.TileNode[tilePosition].objecton = turret;
+            Pathfinder.TileNode[tilePosition].usable = false;
+            selectUi.SetActive(false);
+            uiactive = false;
+        }
+        else
+        {
+            GameObject turret = Instantiate(GameplayManager.Instance.upgrades[Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID[0]], spawnPosition, Quaternion.identity);
+            Destroy(Pathfinder.TileNode[tilePosition].objecton);
+            Pathfinder.TileNode[tilePosition].objecton = turret;
+            Pathfinder.TileNode[tilePosition].usable = false;
+            selectUi.SetActive(false);
+            uiactive = false;
+        }
+    }
+    
+    public void UpUI()
+    {
+        if (ID == -1)
+        {
+            GameObject turret = Instantiate(GameplayManager.Instance.upgrades[5], spawnPosition, Quaternion.identity);
+            Pathfinder.TileNode[tilePosition].objecton = turret;
+            Pathfinder.TileNode[tilePosition].usable = false;
+            selectUi.SetActive(false);
+            uiactive = false;
+        }
+        else
+        {
+            GameObject turret = Instantiate(GameplayManager.Instance.upgrades[Pathfinder.TileNode[tilePosition].objecton.GetComponentInChildren<Turret>().upID[1]], spawnPosition, Quaternion.identity);
+            Destroy(Pathfinder.TileNode[tilePosition].objecton);
+            Pathfinder.TileNode[tilePosition].objecton = turret;
+            Pathfinder.TileNode[tilePosition].usable = false;
+            selectUi.SetActive(false);
+            uiactive = false;
+        }
+    }
+    
+    public void RightUI()
+    {
+        if (ID == -1)
+        {
+            GameObject turret = Instantiate(GameplayManager.Instance.upgrades[10], spawnPosition, Quaternion.identity);
+            Pathfinder.TileNode[tilePosition].objecton = turret;
+            Pathfinder.TileNode[tilePosition].usable = false;
+            selectUi.SetActive(false);
+            uiactive = false;
+        }
+    }
+    
+    public void DownUI()
+    {
+        if (ID == -1)
+        {
+            Destroy(Pathfinder.TileNode[tilePosition].objecton);
+            Pathfinder.TileNode[tilePosition].objecton = null;
+            Pathfinder.TileNode[tilePosition].usable = true;
+            selectUi.SetActive(false);
+            uiactive = false;
+
+        }
+    }
+    
 }

@@ -1,7 +1,190 @@
 fileFormatVersion: 2
 guid: 6ccba42f8c8f752479fb09d018aeeaa3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1149413894945590329
+    second: logo_upgrade_1sur2_0
+  - first:
+      213: -619897371050763765
+    second: logo_upgrade_1sur2_1
+  - first:
+      213: 8112621931065330630
+    second: logo_upgrade_1sur2_2
+  - first:
+      213: -8689243780742145271
+    second: logo_upgrade_1sur2_3
+  - first:
+      213: 7147955150684760958
+    second: logo_upgrade_1sur2_4
+  - first:
+      213: 330644419101444317
+    second: logo_upgrade_1sur2_5
+  - first:
+      213: 2079818619504978082
+    second: logo_upgrade_1sur2_6
+  - first:
+      213: 1037128707797477528
+    second: logo_upgrade_1sur2_7
+  - first:
+      213: -6706903860409738488
+    second: logo_upgrade_1sur2_8
+  - first:
+      213: -598865048601020011
+    second: logo_upgrade_1sur2_9
+  - first:
+      213: -2075495762910409398
+    second: logo_upgrade_1sur2_10
+  - first:
+      213: -3866970281998406063
+    second: logo_upgrade_1sur2_11
+  - first:
+      213: 1712166725938333530
+    second: logo_upgrade_1sur2_12
+  - first:
+      213: -2308882451960085617
+    second: logo_upgrade_1sur2_13
+  - first:
+      213: 8446869473458089927
+    second: logo_upgrade_1sur2_14
+  - first:
+      213: -5035026371049166810
+    second: logo_upgrade_1sur2_15
+  - first:
+      213: -2433308847039726423
+    second: logo_upgrade_1sur2_16
+  - first:
+      213: -1197877769881675639
+    second: logo_upgrade_1sur2_17
+  - first:
+      213: -4223283483005922241
+    second: logo_upgrade_1sur2_18
+  - first:
+      213: -8963736859138567963
+    second: logo_upgrade_1sur2_19
+  - first:
+      213: 7607705834244095285
+    second: logo_upgrade_1sur2_20
+  - first:
+      213: 7306622071988482360
+    second: logo_upgrade_1sur2_21
+  - first:
+      213: 5832116116893246917
+    second: logo_upgrade_1sur2_22
+  - first:
+      213: -2143876591490547280
+    second: logo_upgrade_1sur2_23
+  - first:
+      213: -2679991004268114902
+    second: logo_upgrade_1sur2_24
+  - first:
+      213: -1437468588770712701
+    second: logo_upgrade_1sur2_25
+  - first:
+      213: 3137742796283894434
+    second: logo_upgrade_1sur2_26
+  - first:
+      213: 9056089510029088452
+    second: logo_upgrade_1sur2_27
+  - first:
+      213: -3238924273916393338
+    second: logo_upgrade_1sur2_28
+  - first:
+      213: 6249768298562224700
+    second: logo_upgrade_1sur2_29
+  - first:
+      213: -8572487146420453545
+    second: logo_upgrade_1sur2_30
+  - first:
+      213: 3392127341531760498
+    second: logo_upgrade_1sur2_31
+  - first:
+      213: -5250908796730448454
+    second: logo_upgrade_1sur2_32
+  - first:
+      213: 7230691789846792764
+    second: logo_upgrade_1sur2_33
+  - first:
+      213: 7551293699380257964
+    second: logo_upgrade_1sur2_34
+  - first:
+      213: 8781061804989898829
+    second: logo_upgrade_1sur2_35
+  - first:
+      213: -8321703341815580378
+    second: logo_upgrade_1sur2_36
+  - first:
+      213: -6902936463344227969
+    second: logo_upgrade_1sur2_37
+  - first:
+      213: 958996951765074068
+    second: logo_upgrade_1sur2_38
+  - first:
+      213: -4154097126863558512
+    second: logo_upgrade_1sur2_39
+  - first:
+      213: -1647830772396914815
+    second: logo_upgrade_1sur2_40
+  - first:
+      213: 8856977162848743066
+    second: logo_upgrade_1sur2_41
+  - first:
+      213: -2924551414120612352
+    second: logo_upgrade_1sur2_42
+  - first:
+      213: 2829713637332580713
+    second: logo_upgrade_1sur2_43
+  - first:
+      213: -1024900044839039967
+    second: logo_upgrade_1sur2_44
+  - first:
+      213: -992961434697263500
+    second: logo_upgrade_1sur2_45
+  - first:
+      213: 6015012866765033886
+    second: logo_upgrade_1sur2_46
+  - first:
+      213: -3690734876784869691
+    second: logo_upgrade_1sur2_47
+  - first:
+      213: 4914878970027600285
+    second: logo_upgrade_1sur2_48
+  - first:
+      213: -8730539003508468444
+    second: logo_upgrade_1sur2_49
+  - first:
+      213: -526848250684915859
+    second: logo_upgrade_1sur2_50
+  - first:
+      213: -2753672550024192828
+    second: logo_upgrade_1sur2_51
+  - first:
+      213: -3012966037952475953
+    second: logo_upgrade_1sur2_52
+  - first:
+      213: 8289704955058773734
+    second: logo_upgrade_1sur2_53
+  - first:
+      213: -1743036279549940696
+    second: logo_upgrade_1sur2_54
+  - first:
+      213: -8336339078422749636
+    second: logo_upgrade_1sur2_55
+  - first:
+      213: 2207997179141824453
+    second: logo_upgrade_1sur2_56
+  - first:
+      213: -7730255195767240916
+    second: logo_upgrade_1sur2_57
+  - first:
+      213: 6019063177159419131
+    second: logo_upgrade_1sur2_58
+  - first:
+      213: 3272702683601744358
+    second: logo_upgrade_1sur2_59
+  - first:
+      213: -7439902614738544090
+    second: logo_upgrade_1sur2_60
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +223,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +254,315 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 749
+        width: 144
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb413ee9a2d59070800000000000000
+      internalID: 8112621931065330630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 991
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b971aa1da996780800000000000000
+      internalID: -8689243780742145271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 749
+        width: 146
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b2dfa8653a23360800000000000000
+      internalID: 7147955150684760958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_21
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 729
+        width: 172
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831f6e4ff06566560800000000000000
+      internalID: 7306622071988482360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_26
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 709
+        width: 239
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aada01e2708b8b20800000000000000
+      internalID: 3137742796283894434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_30
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 623
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fb10cfb58680980800000000000000
+      internalID: -8572487146420453545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_37
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 367
+        width: 187
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79a6432cd7d330a0800000000000000
+      internalID: -6902936463344227969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_38
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 434
+        width: 141
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490c3aa85aa0f4d00800000000000000
+      internalID: 958996951765074068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_39
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 441
+        width: 143
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098a3d62caea956c0800000000000000
+      internalID: -4154097126863558512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_40
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 424
+        width: 292
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1870351a4aab129e0800000000000000
+      internalID: -1647830772396914815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_43
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 123
+        width: 246
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96979498f89254720800000000000000
+      internalID: 2829713637332580713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_48
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 89
+        width: 197
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9968821268253440800000000000000
+      internalID: 4914878970027600285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_50
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 78
+        width: 183
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fb36fae4240b8f0800000000000000
+      internalID: -526848250684915859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_upgrade_1sur2_59
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 76
+        width: 238
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1bc8f40c9fa6d20800000000000000
+      internalID: 3272702683601744358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

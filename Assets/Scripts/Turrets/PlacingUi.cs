@@ -17,7 +17,7 @@ public class PlacingUi : MonoBehaviour
     {
         cam = Camera.main;
     }
-
+/*
     // Update is called once per frame
     void Update()
     {
@@ -41,4 +41,5 @@ public class PlacingUi : MonoBehaviour
             }
         }
     }
+    */
 }

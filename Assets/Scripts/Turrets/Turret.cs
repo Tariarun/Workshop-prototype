@@ -20,6 +20,7 @@ public class Turret : MonoBehaviour
     private bool isfireok = true;
     public Transform bulletspawn;
     [SerializeField] private int ID;
+    [SerializeField] public int[] upID;
 
     
     
@@ -51,7 +52,7 @@ public class Turret : MonoBehaviour
             
             if (isfireok && IsFireLineClear(bulletspawn.position, target))
             {
-                
+                isfireok = false;
                 Debug.Log("Before Fire couroutine");
 
                 
@@ -60,7 +61,7 @@ public class Turret : MonoBehaviour
 
                 StartCoroutine(Shootdelay(GameplayManager.Instance.ratefire[ID]));
 
-                isfireok = false;
+                
             }
 
         }

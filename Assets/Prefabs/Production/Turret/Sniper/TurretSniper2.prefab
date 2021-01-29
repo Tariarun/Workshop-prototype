@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1758651746544350805, guid: e58d8ea11070a3a46a7fc1e262494f75, type: 3}
+  throughturret: 0
   bulletspawn: {fileID: 17717436597880418}
   ID: 2
+  upID: 
 --- !u!212 &9048536849894694775
 SpriteRenderer:
   m_ObjectHideFlags: 0

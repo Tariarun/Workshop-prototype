@@ -19,16 +19,16 @@ public class SpawnerManager : MonoBehaviour
     {
         StartCoroutine(Spawn());
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         
     }
-
+    
     IEnumerator Spawn()
     {
-
+        
         for (int i = 1; i < spawnercontent[0].content.Length; i++)
         {
             for (int j = 0; j < spawnercontent.Length; j++)
@@ -40,8 +40,7 @@ public class SpawnerManager : MonoBehaviour
             }
             yield return new WaitForSeconds(delay);
         }
-
-
+        
     }
 }
 
