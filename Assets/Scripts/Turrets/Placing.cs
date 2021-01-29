@@ -7,15 +7,19 @@ using UnityEngine.UI;
 public class Placing : MonoBehaviour
 {
     public bool occupied = false;
-    public GameObject turret;
     public Tilemap maptilemap;
+
+    private Camera cam;
+    public GameObject selectUi;
+
+    int ID;
 
     //public GameObject turretUi;
     //protected Button upgrade01, upgrade02, destroy, close;
 
     void Start()
     {
-        
+        cam = Camera.main;
     }
 
     
@@ -29,10 +33,36 @@ public class Placing : MonoBehaviour
             Vector3Int tilePosition = maptilemap.WorldToCell(clickPosition);
             Vector3 spawnPosition = maptilemap.GetCellCenterWorld(tilePosition);
 
+            //Les lignes ci-dessous permettent d'envoyer les valeurs à "PlacingUi" en passant par le Gameplay Manager
+            GameplayManager.Instance.gmTilePosition = tilePosition;
+            GameplayManager.Instance.gmSpawnposition = spawnPosition;
+
             if (Pathfinder.TileNode[tilePosition].usable)
             {
-                Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[0], spawnPosition, Quaternion.identity);
-                Pathfinder.TileNode[tilePosition].usable = false;
+                selectUi.SetActive(true);
+                GameplayManager.Instance.selectUiActivated = true;
+
+                /*if (bouton 1 est cliqué)
+                 * {
+                 * ID = 0;
+                 * Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[ID], spawnPosition, Quaternion.identity);
+                 * }
+                 * 
+                 * if (bouton 2 est cliqué)
+                 * {
+                 * ID = 5;
+                 * Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[ID], spawnPosition, Quaternion.identity);
+                 * }
+                 * 
+                 * if (bouton 3 est cliqué)
+                 * {
+                 * ID = 10;
+                 * Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[ID], spawnPosition, Quaternion.identity);
+                 * }
+                */
+
+                //Pathfinder.TileNode[tilePosition].objecton = Instantiate(GameplayManager.Instance.upgrades[0], spawnPosition, Quaternion.identity);
+                //Pathfinder.TileNode[tilePosition].usable = false;
             }
             else
             {
