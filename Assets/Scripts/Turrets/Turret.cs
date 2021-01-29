@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private int cost;
     [SerializeField] private int firerange;
     [SerializeField] private GameObject[] upgrades;
+    [SerializeField] private string animname;
 
     int mask = 1 << 10 |  1 << 9;
     private GameObject[] ennemies;
@@ -21,7 +22,9 @@ public class Turret : MonoBehaviour
     private int isfireokanimhash;
     private float angletotarget;
     private bool isfireok = true;
-    private Transform bulletspawn;
+    public Transform bulletspawn;
+
+    
     
     
 
@@ -30,11 +33,13 @@ public class Turret : MonoBehaviour
     
     void Start()
     {
-
-        bulletspawn = transform.GetChild(1).GetComponent<Transform>();
         bulletcontainer = GameObject.FindWithTag("bulletcontainer").transform;
-        _animator = this.GetComponentInChildren<Animator>();
-        isfireokanimhash = Animator.StringToHash("SniperTurret1");
+        if (GetComponentInChildren<Animator>())
+        {
+            _animator = this.GetComponentInChildren<Animator>();
+        }
+
+        isfireokanimhash = Animator.StringToHash(animname);
 
 
     }
@@ -50,7 +55,15 @@ public class Turret : MonoBehaviour
             {
                 
                 Debug.Log("Before Fire couroutine");
-                _animator.Play(isfireokanimhash);
+                if (_animator != null)
+                {
+                    _animator.Play(isfireokanimhash); 
+                }
+                else
+                {
+                    Shoot();
+                }
+
                 StartCoroutine(Shootdelay(ratefire));
                 isfireok = false;
             }
@@ -74,8 +87,8 @@ public class Turret : MonoBehaviour
     {
         Vector3 dir = target.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        angletotarget = angle;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        angletotarget = angle -90;
     }
 
     private GameObject ClosestTarget(Vector3 position, GameObject[] targets)
@@ -105,27 +118,33 @@ public class Turret : MonoBehaviour
 
     private bool IsFireLineClear(Vector3 position, GameObject target)
     {
-        
-        RaycastHit2D hit = Physics2D.Raycast(position, transform.right, firerange, mask);
-        Debug.DrawLine(position, hit.point, Color.red, 1f);
+        Debug.Log("Target at pos : "+target);
+        Debug.Log("position"+ position);
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(position, transform.up, firerange, mask))
+        {
+            Debug.Log("Collider name "+hit.collider.name);
+        }
         
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             Debug.Log("Touching");
+            Debug.DrawLine(position, hit.point, Color.red, 1f);
             return true;
         }
         else
         {
             Debug.Log("NotTouching");
+            Debug.DrawRay(position, transform.up * 5000, Color.red);
             return false;
         }
     }
     
     public void Shoot()
     {
-        GameObject thisbullet = Instantiate(bullet, bulletspawn.position, Quaternion.identity, bulletcontainer);
-        thisbullet.GetComponent<Rigidbody2D>().velocity = transform.right * bulletspeed ;
-        thisbullet.transform.rotation = Quaternion.AngleAxis(angletotarget-90, Vector3.forward);
+        GameObject thisbullet = Instantiate(bullet, bulletspawn.position, Quaternion.AngleAxis(angletotarget, Vector3.forward), bulletcontainer);
+        thisbullet.GetComponent<Rigidbody2D>().velocity = transform.up * bulletspeed ;
+
     }
 
     IEnumerator Shootdelay(float delay)

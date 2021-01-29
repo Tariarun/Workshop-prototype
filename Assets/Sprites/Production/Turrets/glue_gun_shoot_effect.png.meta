@@ -1,7 +1,52 @@
 fileFormatVersion: 2
 guid: e13b3cd781a0ace4182ac8cb7c8a5c51
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7442507590968260330
+    second: glue_gun_shoot_effect_0
+  - first:
+      213: 1076344770716897133
+    second: glue_gun_shoot_effect_1
+  - first:
+      213: 4036061306429844476
+    second: glue_gun_shoot_effect_2
+  - first:
+      213: -7038800634153785546
+    second: glue_gun_shoot_effect_3
+  - first:
+      213: 6964896427532861838
+    second: glue_gun_shoot_effect_4
+  - first:
+      213: 7995129272844873357
+    second: glue_gun_shoot_effect_5
+  - first:
+      213: 161355803032817123
+    second: glue_gun_shoot_effect_6
+  - first:
+      213: -2633629618454366791
+    second: glue_gun_shoot_effect_7
+  - first:
+      213: -4279316483433631470
+    second: glue_gun_shoot_effect_8
+  - first:
+      213: -4396878510776954913
+    second: glue_gun_shoot_effect_9
+  - first:
+      213: -1079035459672354309
+    second: glue_gun_shoot_effect_10
+  - first:
+      213: -4369875702781968727
+    second: glue_gun_shoot_effect_11
+  - first:
+      213: 7406582445651331770
+    second: glue_gun_shoot_effect_12
+  - first:
+      213: 2374339266092274486
+    second: glue_gun_shoot_effect_13
+  - first:
+      213: 199221057692107282
+    second: glue_gun_shoot_effect_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +85,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -85,7 +130,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 329
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619403237c6e6b890800000000000000
+      internalID: -7442507590968260330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 367
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f0e62cdd1ffee00800000000000000
+      internalID: 1076344770716897133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 329
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb237dcf58f20830800000000000000
+      internalID: 4036061306429844476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 328
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637287ccd18215e90800000000000000
+      internalID: -7038800634153785546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 346
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81cb74366848a060800000000000000
+      internalID: 6964896427532861838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_5
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 308
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8eee31b6b764fe60800000000000000
+      internalID: 7995129272844873357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 337
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed083a7f304d3200800000000000000
+      internalID: 161355803032817123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 336
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5741ac0d7737bd0800000000000000
+      internalID: -2633629618454366791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_8
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 217
+        width: 42
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211f673c450dc94c0800000000000000
+      internalID: -4279316483433631470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_9
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 199
+        width: 33
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf47944a462bf2c0800000000000000
+      internalID: -4396878510776954913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 129
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1dd2667fe7601f0800000000000000
+      internalID: -1079035459672354309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 15
+        width: 62
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63311b39bf853f020800000000000000
+      internalID: 2374339266092274486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glue_gun_shoot_effect_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21204871f76c3c200800000000000000
+      internalID: 199221057692107282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

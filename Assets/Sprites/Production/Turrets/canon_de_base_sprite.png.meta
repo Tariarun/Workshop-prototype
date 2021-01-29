@@ -296,7 +296,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1597
         y: 398
-        width: 60
+        width: 124
         height: 173
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -307,27 +307,6 @@ TextureImporter:
       bones: []
       spriteID: e864335727e06c280800000000000000
       internalID: -9023508918634854770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: canon_de_base_sprite_8
-      rect:
-        serializedVersion: 2
-        x: 1661
-        y: 394
-        width: 62
-        height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78cabb7b197dcba60800000000000000
-      internalID: 7691259284494724231
       vertices: []
       indices: 
       edges: []
@@ -357,9 +336,9 @@ TextureImporter:
       name: canon_de_base_sprite_10
       rect:
         serializedVersion: 2
-        x: 918
+        x: 919
         y: 170
-        width: 80
+        width: 175
         height: 225
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -375,33 +354,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canon_de_base_sprite_11
-      rect:
-        serializedVersion: 2
-        x: 1015
-        y: 170
-        width: 80
-        height: 225
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e4035472f534b8e0800000000000000
-      internalID: -1678657445652396830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: canon_de_base_sprite_15
       rect:
         serializedVersion: 2
         x: 1556
         y: 72
-        width: 83
+        width: 217
         height: 233
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -412,27 +370,6 @@ TextureImporter:
       bones: []
       spriteID: cb1cb8482df202110800000000000000
       internalID: 1234038879112905148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: canon_de_base_sprite_16
-      rect:
-        serializedVersion: 2
-        x: 1693
-        y: 71
-        width: 82
-        height: 234
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93df71060ce512970800000000000000
-      internalID: 8728361733159648569
       vertices: []
       indices: 
       edges: []

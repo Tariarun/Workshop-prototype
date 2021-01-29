@@ -21,9 +21,10 @@ public class Enemy : MonoBehaviour
     /// /waypoints system
 
     /// abilities
-    [SerializeField] private int health;
+    public int health;
     [SerializeField] private float reflex;
     [SerializeField] private float speed;
+    private float originalspeed;
     /// /abilities
 
     /// target
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void Start() //Settings the waypoints stack, get the pathfinder and StartCoroutine Loop
     {
+        originalspeed = speed;
         waypoints = new Stack<Vector3>();
         _pathfinder = GameObject.FindWithTag("GameplayManager").GetComponent<Pathfinder>();
         StartCoroutine(FindPath());
@@ -45,6 +47,9 @@ public class Enemy : MonoBehaviour
     
     public virtual void Update() //used to navigate between each waypoint in the waypoints stack + manage the sprite color and behaviour if fear is true
     {
+        Vector3 dir = nextwaypoint - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
         if (waypoints.Count > 0)
         {
@@ -56,6 +61,11 @@ public class Enemy : MonoBehaviour
             {
                 nextwaypoint = waypoints.Pop();
             }
+        }
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
         }
 
 
@@ -73,7 +83,7 @@ public class Enemy : MonoBehaviour
                     Debug.Log("In Attack");
                     if (target != Vector3.zero)
                     {
-
+                        
                         waypoints = _pathfinder.Pathfind(transform.position, target);
                         Debug.Log("Target is "+target);
                     }

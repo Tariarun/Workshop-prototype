@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 3395c6c0b5cd6994dafe5f955cabab5d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4037119930945976600
+    second: sprite_glue_gun_0
+  - first:
+      213: 5767304773095627255
+    second: sprite_glue_gun_1
+  - first:
+      213: 6520883928514440488
+    second: sprite_glue_gun_2
+  - first:
+      213: 8709283152524492547
+    second: sprite_glue_gun_3
+  - first:
+      213: 543840348890222579
+    second: sprite_glue_gun_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -85,7 +100,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprite_glue_gun_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 632
+        width: 458
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6c058ffc449f7c0800000000000000
+      internalID: -4037119930945976600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_glue_gun_1
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1162
+        width: 459
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f997c77225990050800000000000000
+      internalID: 5767304773095627255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_glue_gun_2
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 1172
+        width: 458
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d28a44265de7a50800000000000000
+      internalID: 6520883928514440488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_glue_gun_3
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 131
+        width: 458
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f348a22e69dd870800000000000000
+      internalID: 8709283152524492547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_glue_gun_4
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 134
+        width: 459
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff402a7aeb1c8700800000000000000
+      internalID: 543840348890222579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
