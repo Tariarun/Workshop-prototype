@@ -24,11 +24,13 @@ public class Enemy : MonoBehaviour
     public int health;
     [SerializeField] private float reflex;
     [SerializeField] private float speed;
+    private bool poisoned = false;
     private float originalspeed;
+    private bool canattack = true;
     /// /abilities
 
     /// target
-    protected Vector3 target;
+    protected GameObject target;
     [SerializeField] protected GameObject lasttarget;
     /// /target
     
@@ -68,6 +70,14 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if (target != null && Vector3.Distance(target.transform.position, transform.position) < 1f && canattack)
+        {
+            target.GetComponent<seedbox>().health -= 5;
+            canattack = false;
+            StartCoroutine(attackdelay());
+        }
+        
+
 
 
 
@@ -81,10 +91,10 @@ public class Enemy : MonoBehaviour
             {
                 case BehaviourAI.Attacking:
                     Debug.Log("In Attack");
-                    if (target != Vector3.zero)
+                    if (target != null && target.transform.position != Vector3.zero)
                     {
                         
-                        waypoints = _pathfinder.Pathfind(transform.position, target);
+                        waypoints = _pathfinder.Pathfind(transform.position, target.transform.position);
                         Debug.Log("Target is "+target);
                     }
                     yield return new WaitForSeconds(reflex);
@@ -98,6 +108,48 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    IEnumerator attackdelay()
+    {
+        yield return new WaitForSeconds(2f);
+        canattack = true;
+    }
+
+    void Slowspeed(float slowtime)
+    {
+        if (speed == originalspeed)
+        {
+            StartCoroutine(slowspeedtimer(slowtime));
+        }
+    }
+
+    void Poison(int poisoniteration, int poisondamage)
+    {
+        if (!poisoned)
+        {
+            StartCoroutine(poisontimer(poisoniteration, poisondamage));
+        }
+    }
+
+    IEnumerator slowspeedtimer(float time)
+    {
+        speed = speed / 2;
+        yield return new WaitForSeconds(time);
+        speed = originalspeed;
+
+    }
+
+    IEnumerator poisontimer(int poisoniteration, int poisondamage)
+    {
+        for (int i = 0; i < poisoniteration; i++)
+        {
+            health -= poisondamage;
+            yield return new WaitForSeconds(1f);
+        }
+
+
+    }
+    
 
     private void OnTriggerEnter2D(Collider2D other) //used to detect when player collide with enemies
     {

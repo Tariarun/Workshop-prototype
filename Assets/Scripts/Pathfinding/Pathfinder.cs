@@ -120,14 +120,14 @@ public class Pathfinder : MonoBehaviour
 
             //Debug.Log("While end");
 
-            Debug.Log("While end without reaching target");
+            //Debug.Log("While end without reaching target");
             Resetparent(usedNode);
 
             return new Stack<Vector3>();
         }
         else
         {
-            Debug.Log("Don't contain");
+            //Debug.Log("Don't contain");
             Resetparent(usedNode);
             return new Stack<Vector3>();
         }

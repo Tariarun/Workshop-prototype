@@ -8,12 +8,13 @@ public class Turret : MonoBehaviour
     private GameObject lasttarget;
 
 
-
+    private int damage;
     int mask = 1 << 10 |  1 << 9;
     private GameObject[] ennemies;
     private GameObject target;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private float bulletspeed;
+    private float bulletspeed = 20f;
+    [SerializeField] private bool throughturret = false;
 
     private float angletotarget;
     private bool isfireok = true;
@@ -30,7 +31,11 @@ public class Turret : MonoBehaviour
     void Start()
     {
         bulletcontainer = GameObject.FindWithTag("bulletcontainer").transform;
-
+        damage = GameplayManager.Instance.damage[ID];
+        if (throughturret)
+        {
+            mask = 1 << 10;
+        }
 
 
 
@@ -134,6 +139,7 @@ public class Turret : MonoBehaviour
     {
         GameObject thisbullet = Instantiate(bullet, bulletspawn.position, Quaternion.AngleAxis(angletotarget, Vector3.forward), bulletcontainer);
         thisbullet.GetComponent<Rigidbody2D>().velocity = transform.up * bulletspeed ;
+        thisbullet.GetComponent<Bullet>().damage = damage;
 
     }
 

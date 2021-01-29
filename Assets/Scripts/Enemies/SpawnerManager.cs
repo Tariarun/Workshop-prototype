@@ -41,7 +41,7 @@ public class SpawnerManager : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        yield return null;
+
     }
 }
 
