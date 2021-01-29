@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5705535036712254552}
   - component: {fileID: 5015193961458735589}
   - component: {fileID: 2770147235601782545}
+  - component: {fileID: 2217305111198303630}
   m_Layer: 0
   m_Name: balle_sniper_11
   m_TagString: Untagged
@@ -131,3 +132,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2217305111198303630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971510936650417745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea988d7a21a93cd419713dc674f91b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  slowpower: 0
+  poisonpower: 0
+  poisondamage: 0
+  poisontime: 0
+  shrapnelpower: 0
+  penetratorpower: 0
+  slowtime: 0
+  shrapneldecrement: 0

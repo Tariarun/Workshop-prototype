@@ -9,24 +9,13 @@ public class Bullet : MonoBehaviour
     public int damage;
     [SerializeField]private bool slowpower;
     [SerializeField]private bool poisonpower;
-    [SerializeField] private int poisondamage;
+    [SerializeField]private int poisondamage;
+    [SerializeField]private float poisontime;
     [SerializeField]private bool shrapnelpower;
     private int shrapnelcounter = 0;
     [SerializeField]private bool penetratorpower;
-    [SerializeField] private int slowtime;
-    [SerializeField] private int shrapneldecrement;
-    
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]private float slowtime;
+    [SerializeField]private int shrapneldecrement;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

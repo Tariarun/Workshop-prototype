@@ -15,11 +15,9 @@ public class Proto : Enemy
         base.Update();
     }
 
-    private Vector3 ClosestTarget(Vector3 position, GameObject[] targets)
+    private GameObject ClosestTarget(Vector3 position, GameObject[] targets)
     {
-        if (targets == null || targets.Length == 0) return Vector3.zero;
-        
-        Debug.Log("Shit happened");
+        if (targets == null || targets.Length == 0) return this.gameObject;
 
         for (int i = 0; i < targets.Length; i++)
         {
@@ -38,6 +36,6 @@ public class Proto : Enemy
             }
         }
 
-        return lasttarget.transform.position;
+        return lasttarget;
     }
 }

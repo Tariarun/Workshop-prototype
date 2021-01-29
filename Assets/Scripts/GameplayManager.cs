@@ -21,6 +21,9 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] public Button[] upgrade01, upgrade02, destroy, exit;
 
     public static GameplayManager Instance;
+    public bool selectUiActivated = false;
+    public Vector3 gmSpawnposition;
+    public Vector3Int gmTilePosition;
     private void Awake()
     {
         if (Instance == null)
