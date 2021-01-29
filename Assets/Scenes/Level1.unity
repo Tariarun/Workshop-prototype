@@ -551,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767463523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.42, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858041832}
@@ -6416,8 +6416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   occupied: 0
-  turret: {fileID: 0}
   maptilemap: {fileID: 767463526}
+  selectUi: {fileID: 0}
 --- !u!114 &1941391846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6444,6 +6444,9 @@ MonoBehaviour:
   upgrade02: []
   destroy: []
   exit: []
+  selectUiActivated: 0
+  gmSpawnposition: {x: 0, y: 0, z: 0}
+  gmTilePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1941391847
 MonoBehaviour:
   m_ObjectHideFlags: 0
