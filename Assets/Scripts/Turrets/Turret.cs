@@ -6,11 +6,15 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private GameObject lasttarget;
+    /*
     [SerializeField] private float ratefire;
     [SerializeField] private int damage;
     [SerializeField] private int cost;
     [SerializeField] private int firerange;
-    [SerializeField] private GameObject[] upgrades;
+    [SerializeField] public GameObject[] upgrades;
+    [SerializeField] private Sprite icon;
+    [SerializeField] private string name, description;
+    */
 
     int mask = 1 << 10 |  1 << 9;
     private GameObject[] ennemies;
@@ -51,7 +55,7 @@ public class Turret : MonoBehaviour
                 
                 Debug.Log("Before Fire couroutine");
                 _animator.Play(isfireokanimhash);
-                StartCoroutine(Shootdelay(ratefire));
+                StartCoroutine(Shootdelay(GameplayManager.Instance.ratefire[0]));
                 isfireok = false;
             }
 
@@ -106,7 +110,7 @@ public class Turret : MonoBehaviour
     private bool IsFireLineClear(Vector3 position, GameObject target)
     {
         
-        RaycastHit2D hit = Physics2D.Raycast(position, transform.right, firerange, mask);
+        RaycastHit2D hit = Physics2D.Raycast(position, transform.right, GameplayManager.Instance.firerange[0], mask);
         Debug.DrawLine(position, hit.point, Color.red, 1f);
         
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
