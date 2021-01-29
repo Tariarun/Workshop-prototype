@@ -23,7 +23,12 @@ public class SpawnerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (spawnercontent == null || spawnercontent.Length == 0)
+        {
+            GameplayManager.Instance.pause = true;
+            GameplayManager.Instance.uiPanels[0].SetActive(true);
+            GameplayManager.Instance.uiPanels[3].SetActive(true);
+        }
     }
 
     IEnumerator Spawn()
